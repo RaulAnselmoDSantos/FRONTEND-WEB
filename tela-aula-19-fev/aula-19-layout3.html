@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aula dia 19 Fev</title>
+        <style>
+            .flex_pai{
+                display: flex;
+    flex-direction: row;
+            }
+            .barra_lateral{
+                height: 100%;
+                width: 400px;
+            }
+            .espaco{
+                height: 80%;
+            }
+            #head-menu{
+                background-color: beige;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                height: 750px;
+            }
+            #head-menu-quadrado{
+                margin: 20px;
+                width: 75px;
+                height: 75px;
+                background-color: aqua;
+            }
+            #head-menu-retangulo{
+                margin: 10px;
+                width: 250px;
+                height: 75px;
+                background-color: blueviolet;
+            }
+            .conteudo{
+                height: 100%;
+                width: 100%;
+            }
+            #header {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            }
+            .nav-bar {
+            height: fit-content;
+            width: 100%;
+            background-color: black;
+            }
+            .logotipo {
+                width: 200px;
+                height: 45px;
+                background-color: #000;
+                height: auto;
+                
+            }
+
+            .logotipo_flex{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                margin: 0 10px;
+            }
+
+            .logotipo img {
+                width: 70px;
+                height: 70px;
+                margin: 0 14px;
+            }
+
+            .logotipo h1 {
+                color: #DDD;
+                width: 40px;
+                font-family: Verdana, 'Geneva', Tahoma, sans-serif;
+                font-weight: bolder;
+                text-align: center;
+                font-size: larger;
+                margin: 0 -12px;
+            }
+            .section {
+            width: 100%;
+            height: 300px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: auto;
+            padding: 20px 20px;
+            }
+            .cor1 {
+            background-color: rgb(9, 97, 68);
+            }
+            .cor2 {
+            background-color: cornflowerblue;
+            }
+            .section p {
+            height: 150px;
+            width: 300px;
+            align-items: center;
+            }
+            .smol-text {
+            height: 100px;
+            width: 150px;
+            align-items: center;
+            }
+            .section_div_quadrada {
+            height: 250px;
+            width: 300px;
+            background-color: tomato;
+            }
+            .section_div_quadrada_pequeno {
+            height: 150px;
+            width: 150px;
+            background-color: tomato;
+            margin: 10px auto 10px auto;
+            }
+            .section_div_redonda {
+            height: 150px;
+            width: 150px;
+            border-radius: 100px;
+            background-color: tomato;
+            margin: 10px;
+            }
+            .footer p{
+                display: flex;
+                width: 100%;
+                height: 150px;
+                background-color: beige;
+                flex-wrap: nowrap;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div Class="flex_pai">
+            <div Class="barra_lateral">
+                <div id="head-menu">
+                    <div id="head-menu-quadrado"></div>
+                    <div Class="espaco"></div>
+                    <div id="head-menu-retangulo"></div>
+                </div>
+            </div>
+            <div Class="conteudo">
+                <div Class="nav-bar" >
+                    <header id="header">
+                        <div class="logotipo">
+                            <div class="logotipo_flex">
+                                <img src="/if-finance/img/interface-control-svgrepo-com.svg" alt="Logo IF-Finance">
+                                <h1>IFSP Finance</h1>
+                            </div>
+                        </div>
+                        <nav></nav>
+                    </header>
+                </div>
+                <div Class="section">
+                        <p>
+                            ostaríamos de informar que o problema que você mencionou foi identificado e resolvido através de uma atualização 
+                            recente em nosso portal. Constatamos que você conseguiu efetuar a solicitação desejada após essa atualização, 
+                            indicando que a questão foi solucionada com sucesso.
+                        </p>
+                        <div Class="section_div_quadrada"></div>
+                </div>
+            
+                <div Class="section cor2">
+                    <div Class="section">
+                        <div Class="section_div_redonda"></div>
+                        <p Class="smol-text">
+                            ostaríamos de informar que o problema que você mencionou foi identificado e resolvido através de uma atualização 
+                            recente em nosso portal. Constatamos que você conseguiu efetuar a solicitação desejada após essa atualização, 
+                            indicando que a questão foi solucionada com sucesso.
+                        </p>
+                    </div>
+                    <div Class="section">
+                        <div Class="section_div_redonda"></div>
+                        <p Class="smol-text">
+                            ostaríamos de informar que o problema que você mencionou foi identificado e resolvido através de uma atualização 
+                            recente em nosso portal. Constatamos que você conseguiu efetuar a solicitação desejada após essa atualização, 
+                            indicando que a questão foi solucionada com sucesso.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
