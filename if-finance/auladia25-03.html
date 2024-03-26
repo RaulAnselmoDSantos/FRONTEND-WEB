@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IF Finance</title>
+        <link rel='stylesheet' href="css/cssReset.css">
+        <link rel='stylesheet' href="css/style.css">
+        <style>
+            
+        </style>
+    </head>
+        <body>
+            <header>
+                <div class="logotipo">
+                    <div class="logotipo_flex">
+                        <img src="./img/interface-control-svgrepo-com.svg" alt="Logo IF-Finance">
+                        <h1>IFSP <span>Finance</span></h1>
+                    </div>
+                </div>
+                <nav class="busca">
+                    <ul class="busca_navegate">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./card.html">Cards</a></li>
+                        <li>Quem Somos</li>
+                        <li>Contato</li>
+                        <li><a href="./auladia25-03.html">Aula 25/03</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main style="display: flex; flex-direction: column;">
+                
+                <h1 style="font-size: 50px;">Cadastre-se</h1>
+                <div>
+                    
+                    <form action="exemplo-server.php" method="POST">
+                        <fieldset>
+                            <legend>Dados Pessoais</legend>
+                            <label for="Nome">Nome: </label>
+                            <input type="text" name="Nome" id="Nome">
+                            <label for="Sobrenome" nome="Sobrenome" id="Sobrenome">Sobrenome: </label>
+                            <input type="text" name="Sobrenome" id="Sobrenome">
+                            <label for="Email">Email : </label>
+                            <input type="text" name="Email" id="Email">
+                            <label for="password">Senha: </label>
+                            <input type="password" name="password" id="password">
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Endereço</legend>
+                            <label for="Rua">Rua: </label>
+                            <input type="text" name="Rua" id="Rua"></input>
+                            
+                                <label for="Cidade">Cidade</label>
+                                <select style="width: 100%;">
+                                    <option value="Caraguatatuba">Caragua</option>
+                                    <option value="São Sebastião">São Sebá</option>
+                                    <option value="Ilha Bela">Ilha</option>
+                                </select>
+                            
+                            
+                                <h2>Com que frequencia você visita o litoral ?</h2>
+                                <div class="frequencia_radio">
+                                    
+                                        <input type="radio" name="MuitoPouco" id="MuitoPouco" value="MuitoPouco">
+                                        <label for="MuitoPouco">Muito Pouco</label>
+                                    
+                                    </br>
+                                    <input type="radio" name="MuitoPouco" id="MuitoPouco" value="MuitoPouco">
+                                    <label for="MuitoPouco">Pouco</label>
+                                    
+                                    </br>
+                                    <input type="radio" name="MuitoPouco" id="MuitoPouco" value="MuitoPouco">
+                                    <label for="MuitoPouco">Muito Pouco</label>
+                                    </br>
+                                </div>
+                        </fieldset>
+                        <div class="feedbackd">
+                            <input type="checkbox" name="TermosDeuso" id="TermosDeuso"><label for="TermosDeuso">Aceita os nossos termos de uso ? </label>
+                            </br>
+                            <input type="checkbox" name="NewsLatter"><label for="NewsLatter">Aceita os nossos termos de uso ? </label>
+                            </br>
+                            <legend>Deixe seu comentario: </legend>
+                            <textarea  cols="50" rows="10"></textarea>
+                        </div>
+                        <input type="submit" value="Enviar">
+                        <input type="submit" value="Reset">
+                    </form>
+                </div>
+            </main>
+            <footer>
+                <p>
+                    Copyright 2024 @ Raul-Anselmo
+                </p>
+            </footer>
+        </body>
+    </html>
