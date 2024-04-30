@@ -1,7 +1,6 @@
 console.log('Olá mundo!!')
 
 const allStocks = [
-
     {
         index: 1,
         bolsa: 'NASDAQ',
