@@ -50,7 +50,7 @@ const allStocks = [
 function addCard(stock){
     let main = document.querySelector('body > main')
     main.innerHTML = main.innerHTML + `
-            <div class="card_ticker">  
+            <div id="card_ticker" class="card_ticker" onclick="editCard()">  
             <header>
                 <h2>${stock.bolsa}</h2>
                 <p>${stock.codigo}</p>
@@ -89,7 +89,7 @@ function addCard(stock){
 
 function addTableLine(stock){
     let main = document.querySelector('main > table > tbody')
-    main.innerHTML = main.innerHTML + `
+    main.innerHTML = main.innerHTML += `
     
           <tr>
             <td>${stock.bolsa}</td>
@@ -99,6 +99,37 @@ function addTableLine(stock){
             <td><a href="${stock.site}" target="_blank">${stock.site}</a></td>
           </tr>
     `
+}
+
+const openModal = () => {
+    const display = document.getElementById('add-card-modal')
+        display.style.display = 'flex';
+        console.log(display)
+}
+
+const closeModal = (event, id) => {
+    const display = document.getElementById('add-card-modal')
+
+        if(event?.target?.id === 'add-card-modal' || id == 'add-card-modal'){
+            display.style.display = 'none';
+        }
+}
+
+const createCard = (event) => {
+    event.preventDefault();
+    
+    const formData = new FormData(event.target)
+    const stock = Object.fromEntries(formData)
+    addCard(stock)
+
+    closeModal(null, 'add-card-modal');
+    event.target.reset();
+}
+
+const editCard = (event) => {
+
+    const formData = document.getElementById("card_ticker")
+    console.log(formData)
 }
 
 function realFormat(valor){

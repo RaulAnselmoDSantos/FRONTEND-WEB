@@ -21,6 +21,7 @@
                 </div>
                 <nav class="busca">
                     <ul class="busca_navegate">
+                        <li class="addCard" onclick="openModal()">Add Card</li>
                         <li><a href="./index.html">Home</a></li>
                         <li><a href="./card.html">Cards</a></li>
                         <li>Quem Somos</li>
@@ -38,6 +39,26 @@
                     Copyright 2024 @ Raul-Anselmo
                 </p>
             </footer>
+            <div id="add-card-modal" onclick="closeModal(event)">
+                <main>
+                    <h2>Add Card Ticker</h2>
+                    <form onsubmit="createCard(event)">
+                        <label for="bolsa">Bolsa</label>
+                        <input type="text" name="bolsa" id="bolsa"></input>
+                        <label for="codigo">Codigo</label>
+                        <input type="text" name="codigo" id="codigo"></input>
+                        <label for="empresa">Empresa</label>
+                        <input type="text" name="empresa" id="empresa"></input>
+                        <label for="valor">Valor</label>
+                        <input type="text" name="valor" id="valor"></input>
+                        <label for="variacao">Variaçao</label>
+                        <input type="text" name="variacao" id="variacao"></input>
+                        <label for="qtdAcoes">Número de Ações</label>
+                        <input type="text" name="qtdAcoes" id="qtdAcoes"></input>
+                        <button class="addCard">Add Card</button>
+                    </form>
+                </main>
+            </div>
         </body>
     </html>
 

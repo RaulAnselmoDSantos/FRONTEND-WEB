@@ -71,6 +71,37 @@ body > main{
     gap: 20px;
     color: aliceblue;
 }
+.addCard{
+    cursor: pointer;
+    background-color: rgb(0, 255, 68);
+    border-radius: 10px;
+    height: fit-content;
+    padding: 5px;
+    color: black;
+}
+#add-card-modal{
+    position: absolute;
+    background: #00000048;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+#add-card-modal main{
+    width: 400px;
+    background: #FFF;
+    border-radius: 15px;
+    color:#000;
+}
+#add-card-modal main form{
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
 .card_ticker{
     width: fit-content;
     height: fit-content;
