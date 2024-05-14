@@ -1,5 +1,7 @@
 console.log('Olá mundo!!')
 
+const token = 'cp1bi01r01qu1k1i3jb0cp1bi01r01qu1k1i3jbg'
+
 const allStocks = [
     {
         index: 1,
@@ -101,17 +103,22 @@ function addTableLine(stock){
     `
 }
 
-const openModal = () => {
-    const display = document.getElementById('add-card-modal')
+const openModal = (idModal) => {
+    const display = document.getElementById(idModal)
         display.style.display = 'flex';
         console.log(display)
 }
 
 const closeModal = (event, id) => {
-    const display = document.getElementById('add-card-modal')
+        if(id){
+            const display = document.getElementById(id)
+            modal.style.display = 'none'
+            return
+        }
 
-        if(event?.target?.id === 'add-card-modal' || id == 'add-card-modal'){
+        if(event?.target?.className === "modal"){
             display.style.display = 'none';
+            return
         }
 }
 
@@ -122,19 +129,40 @@ const createCard = (event) => {
     const stock = Object.fromEntries(formData)
     addCard(stock)
 
-    closeModal(null, 'add-card-modal');
+    closeModal(null, 'add-form-modal');
     event.target.reset();
 }
 
-const editCard = (event) => {
+const creatApitCard = async(event) => {
+    event.preventDefault()
+    const {codigo, nAcoes} = event.target.elements
 
-    const formData = document.getElementById("card_ticker")
-    console.log(formData)
+    const response = await fetch(``)
+    const result = await response.json()
+
+    const response2 = await fetch(``)
+    const profiel = await response2.json()
 }
+
 
 function realFormat(valor){
     return valor.toFixed(2).toString().replace('.',',');
 }
 
+ testeApi = async () => {
+    const response = await fetch('https://cat-fact.herokuapp.com/facts')
+    console.log(response)
+    const result = await response.json()
+    console.log(result[0].text)
+
+    result.map((item => console.log(item.text)))
+
+}
+
+
 function loadCard(){ allStocks.map(stock => addCard(stock))}
 function loadTable(){allStocks.map((stock, index) => addTableLine(stock))} 
+
+// terminar projeto:
+// fazer um cartão apartir da API fornecendo os requisitos para a API 
+// utilizar : https://finnhub.io/docs/api/company-profile2 , https://finnhub.io/docs/api/quote , https://finnhub.io/docs/api/company-news
